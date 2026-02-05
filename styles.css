@@ -58,7 +58,7 @@ body {
 
 .yes-button,
 .no-button {
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.3s ease, opacity 0.6s ease;
 }
   
   .gif_container img {
