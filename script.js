@@ -64,9 +64,9 @@ const messages = [
     "Bandarban giye gach e thaka shuru korbo",
     "Dari kete felboooo",
     "Please last bar vebe dekho",
-    "Garlic sauce kine dibo tomake...",
     "Accha thikase, pera nai.",
-    "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰"
+    "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰",
+    "lalalala"
 ];
 
 let messageIndex = 0;
