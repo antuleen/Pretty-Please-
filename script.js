@@ -72,22 +72,13 @@ const messages = [
 let messageIndex = 0;
 
 function handleNoClick() {
-  const noButton = document.querySelector('.no-button');
-  const yesButton = document.querySelector('.yes-button');
-  noButton.textContent = messages[messageIndex];
-  yesScale *= 1.35; // 🔥 growth rate (adjust this)
-  yesButton.style.transform = `scale(${yesScale})`;
-  noScale *= 0.85;
-  noButton.style.transform = `scale(${noScale})`;
-  if (messageIndex >= messages.length - 1) {
-    noButton.style.opacity = "0";
-    noButton.style.pointerEvents = "none";
-  }
-
-  messageIndex++;
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
+    noButton.textContent = messages[messageIndex];
+    messageIndex = (messageIndex + 1) % messages.length;
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1}px`;
 }
-
-
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
