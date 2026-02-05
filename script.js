@@ -72,13 +72,22 @@ const messages = [
 let messageIndex = 0;
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
-    noButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1}px`;
+  const noButton = document.querySelector('.no-button');
+  const yesButton = document.querySelector('.yes-button');
+  noButton.textContent = messages[messageIndex];
+  const progress = messageIndex / (messages.length - 1);
+  const yesScale = 1 + progress * 0.4; // max ~1.4x
+  yesButton.style.transform = `scale(${yesScale})`;
+  const noScale = 1 - progress * 0.6; // shrinks toward 0
+  noButton.style.transform = `scale(${Math.max(noScale, 0)})`;
+  if (messageIndex === messages.length - 1) {
+    noButton.style.opacity = "0";
+    noButton.style.pointerEvents = "none";
+  }
+
+  messageIndex++;
 }
+
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
