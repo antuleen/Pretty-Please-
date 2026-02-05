@@ -66,8 +66,7 @@ const messages = [
     "Please last bar vebe dekho",
     "Garlic sauce kine dibo tomake...",
     "Accha thikase, pera nai.",
-    "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰",
-    "....."
+    "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰"
 ];
 
 let messageIndex = 0;
