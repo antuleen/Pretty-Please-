@@ -75,18 +75,18 @@ function handleNoClick() {
   const noButton = document.querySelector('.no-button');
   const yesButton = document.querySelector('.yes-button');
   noButton.textContent = messages[messageIndex];
-  const progress = messageIndex / (messages.length - 1);
-  const yesScale = 1 + progress * 20; // max ~400x
+  yesScale *= 1.35; // 🔥 growth rate (adjust this)
   yesButton.style.transform = `scale(${yesScale})`;
-  const noScale = 1 - progress * 0.6; // shrinks toward 0
-  noButton.style.transform = `scale(${Math.max(noScale, 0)})`;
-  if (messageIndex === messages.length - 1) {
+  noScale *= 0.85;
+  noButton.style.transform = `scale(${noScale})`;
+  if (messageIndex >= messages.length - 1) {
     noButton.style.opacity = "0";
     noButton.style.pointerEvents = "none";
   }
 
   messageIndex++;
 }
+
 
 
 function handleYesClick() {
