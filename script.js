@@ -82,6 +82,7 @@ function handleNoClick() {
     yesButton.style.fontSize = `${currentSize * 1.2}px`;
 }
 
+
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
