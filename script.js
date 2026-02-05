@@ -67,6 +67,7 @@ const messages = [
     "Garlic sauce kine dibo tomake...",
     "Accha thikase, pera nai.",
     "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰"
+    "....."
 ];
 
 let messageIndex = 0;
