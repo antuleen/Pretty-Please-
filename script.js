@@ -54,16 +54,19 @@
 })();
 */
 const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+    "aaaaaaaaaa kenoooo?? :)",
+    "Ami eka thakbo oidin?",
+    "Amake valobasho na taile? :(",
+    "Was this all a joke to you?",
+    "You're breaking my heart Shrabonya",
+    "Please! Ami tomake onek valobashi!",
+    "Tumi na bolle ami kanna korbo",
+    "Bandarban giye gach e thaka shuru korbo",
+    "Dari kete felboooo",
+    "Please last bar vebe dekho",
+    "Garlic sauce kine dibo tomake...",
+    "Accha thikase, pera nai.",
+    "Naaaaaaaa say yesssssss bbyyyyy🥰🥰🥰🥰🥰"
 ];
 
 let messageIndex = 0;
@@ -74,7 +77,7 @@ function handleNoClick() {
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    yesButton.style.fontSize = `${currentSize * 1}px`;
 }
 
 function handleYesClick() {
