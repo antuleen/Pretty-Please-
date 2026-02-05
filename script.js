@@ -76,7 +76,7 @@ function handleNoClick() {
   const yesButton = document.querySelector('.yes-button');
   noButton.textContent = messages[messageIndex];
   const progress = messageIndex / (messages.length - 1);
-  const yesScale = 1 + progress * 0.4; // max ~1.4x
+  const yesScale = 1 + progress * 0.8; // max ~5x
   yesButton.style.transform = `scale(${yesScale})`;
   const noScale = 1 - progress * 0.6; // shrinks toward 0
   noButton.style.transform = `scale(${Math.max(noScale, 0)})`;
